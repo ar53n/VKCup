@@ -1,0 +1,51 @@
+.root {
+  --font-footnote: 13px/18px Arial, serif;
+}
+
+.title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 32px;
+  display: flex;
+  margin-right: 12px;
+}
+
+.titleText {
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.letterHead {
+  display: flex;
+  align-items: center;
+}
+
+.readIcon:after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-icon-secondary);
+}
+
+.footnote {
+  font: var(--font-footnote);
+  color: var(--color-text-secondary);
+}
+
+.letterText {
+  font-family: Helvetica Neue;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding: 32px;
+}

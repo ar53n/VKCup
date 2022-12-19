@@ -1,0 +1,119 @@
+.letterListRoot {
+  display: flex;
+  border-radius: 12px;
+  background-color: var(--color-bg-list);
+  width: 100%;
+}
+
+.linkReset {
+  color: inherit;
+  text-decoration: none;
+}
+
+.readIcon {
+  min-width: 28px;
+  width: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.letterStatus {
+  min-width: 48px;
+  display: inline-block;
+}
+
+.letterStatus .bookmark {
+  display: none;
+}
+
+.bookmark {
+  color: var(--color-icon-secondary);
+}
+
+.important {
+}
+
+.letterDate {
+  margin-left: 12px;
+  color: var(--color-icon-secondary);
+  white-space: nowrap;
+  min-width: 65px;
+  text-align: right;
+  font-size: 13px;
+}
+
+.letterFlag {
+  min-width: 20px;
+  margin-left: 12px;
+}
+
+.author {
+  min-width: 276px;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.letterItemRoot {
+  list-style: none;
+  text-align: start;
+  display: flex;
+  height: 48px;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 12px;
+  font-size: 15px;
+}
+
+.letterItemRoot:hover {
+  background-color: var(--color-button-hover);
+  border-radius: 12px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.readIcon:after {
+  content: "";
+  display: none;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-icon-secondary);
+}
+
+.letterItemRoot:not(.unread):hover .readIcon:after {
+  display: block;
+  background-color: var(--color-icon-secondary);
+}
+.letterItemRoot:hover .bookmark {
+  display: inline-block;
+}
+
+.letterItemRoot:hover .important,
+.bookmarkActive + .important {
+  display: none;
+}
+
+.unread .readIcon:after {
+  display: block;
+  background-color: var(--color-unread);
+}
+
+.letterTitle {
+  color: var(--color-text-primary);
+}
+
+.authorName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.unread .authorName,
+.unread .letterTitle {
+  font-weight: 700;
+}

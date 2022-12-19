@@ -1,0 +1,67 @@
+html,
+body {
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text-primary);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html {
+  --color-bg: #f6f7f8;
+  --color-header: #ffffff;
+  --color-bg-list: #ffffff;
+  --color-bg-list-hover: rgba(0, 16, 61, 0.04);
+  --color-text-primary: #2c2d2e;
+  --color-text-secondary: #87898f;
+  --color-text-link: #005bd1;
+  --color-unread: #005bd1;
+  --color-favorite: rgba(252, 44, 56, 1);
+  --color-icon-positive: rgba(13, 194, 104, 1);
+  --color-icon-primary: rgba(44, 45, 46, 1);
+  --color-icon-secondary: rgba(165, 167, 173, 1);
+  --color-button-secondary: rgba(135, 137, 143, 1);
+  --color-button-hover: rgba(0, 16, 61, 0.04);
+  --color-button-active: rgba(0, 16, 61, 0.08);
+  --color-separator-primary-alpha: rgba(0, 16, 61, 0.12);
+  --shadow-header: drop-shadow(0px 0px 16px rgba(2, 13, 41, 0.12));
+  --color-icon-order: rgba(249, 76, 163, 1);
+  --color-icon-finance: rgba(36, 199, 128, 1);
+  --color-icon-registrations: rgba(238, 172, 44, 1);
+  --color-icon-travel: rgba(193, 93, 243, 1);
+  --color-icon-event: rgba(59, 186, 254, 1);
+  --color-icon-fees: rgba(238, 60, 60, 1);
+}
+
+html.dark {
+  --color-bg: #19191a;
+  --color-header: #232324;
+  --color-bg-list: #232324;
+  --color-bg-list-hover: rgba(255, 255, 255, 0.04);
+  --color-text-primary: #e7e8ea;
+  --color-text-secondary: #87898f;
+  --color-text-link: #005bd1;
+  --color-unread: #005bd1;
+  --color-favorite: rgba(252, 44, 56, 1);
+  --color-icon-positive: rgba(13, 194, 104, 1);
+  --color-icon-secondary: rgba(165, 167, 173, 1);
+  --color-button-secondary: rgba(135, 137, 143, 1);
+  --color-button-hover: rgba(0, 16, 61, 0.04);
+  --color-button-active: rgba(0, 16, 61, 0.08);
+  --color-separator-primary-alpha: rgba(0, 16, 61, 0.12);
+  --shadow-header: drop-shadow(0px 0px 16px rgba(2, 13, 41, 0.12));
+}
+
+.logo-name {
+  fill: #005FF9;
+}
+.dark .logo-name {
+  fill: white;
+}

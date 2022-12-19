@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  margin-top: 12px;
+  margin-right: 16px;
+  display: flex;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.letterListRoot {
+  display: flex;
+  border-radius: 12px;
+  background-color: var(--color-bg-list);
+  width: 100%;
+}
+.readIcon {
+  width: 28px;
+  display: inline-block;
+}
+
+.letterStatus {
+  width: 48px;
+  display: inline-block;
+}
+
+.author {
+  min-width: 276px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.letterListContainer {
+  flex: 1;
+  border-radius: 12px;
+  background-color: var(--color-bg-list);
+  font-size: 15px;
+  line-height: 20px;
+  width: 100%;
+}
+
+.header {
+  background-color: var(--bg-color-header);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12px 16px;
+  justify-content: center;
+  color: var(--text-primary-color);
+  filter: var(--shadow-header);
+  background-color: var(--color-header);
+}
+
+hr {
+  height: 1px;
+  background-color: rgba(0, 16, 61, 0.12);
+  width: 100%;
+  margin: 8px 0;
+  border: none;
+}
+
+.link {
+  color: #b318f0;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-right: 16px;
+  min-width: 200px;
+}

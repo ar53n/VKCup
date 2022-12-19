@@ -1,0 +1,23 @@
+.root {
+    padding: 8px 0px;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    display: inline-flex;
+    padding-left: 12px;
+    padding-right: 8px;
+}
+
+.root svg {
+    margin-right: 8px;
+}
+
+.root:hover {
+    background-color: var(--color-button-hover);
+}
+
+.root:active {
+    background-color: var(--color-button-active);
+}

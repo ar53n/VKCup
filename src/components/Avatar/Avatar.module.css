@@ -1,0 +1,11 @@
+
+.letterAvatar {
+  display: inline-flex;
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+

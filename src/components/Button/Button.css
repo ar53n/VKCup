@@ -1,0 +1,41 @@
+.Button-color-white {
+  border: 1px solid var(--color-separator-primary-alpha);
+  --primary-color: white;
+  --text-color: #333333;
+  background-color: var(--primary-color);
+  font-weight: 700;
+}
+
+.Button-textAlign-center {
+  justify-content: center;
+}
+
+.Button-color-secondary {
+  --text-color: var(--color-button-secondary);
+}
+
+.Button-variant-aqua {
+  color: var(--text-color); 
+}
+
+.Button-variant-text {
+}
+
+.Button-variant-text:hover {
+  background-color: transparent !important;
+}
+
+.Button-variant-text:active {
+  background-color: transparent !important;
+}
+
+.Button-variant-outlined {
+}
+
+.Button-variant-outlined:hover {
+  background-color: transparent !important;
+}
+
+.Button-variant-outlined:active {
+  background-color: transparent !important;
+}
