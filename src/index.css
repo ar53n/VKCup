@@ -38,6 +38,7 @@ html {
   --color-icon-travel: rgba(193, 93, 243, 1);
   --color-icon-event: rgba(59, 186, 254, 1);
   --color-icon-fees: rgba(238, 60, 60, 1);
+  --color-icon-attach: rgba(44, 45, 46, 1);
 }
 
 html.dark {
@@ -57,6 +58,7 @@ html.dark {
   --color-button-active: rgba(0, 16, 61, 0.08);
   --color-separator-primary-alpha: rgba(0, 16, 61, 0.12);
   --shadow-header: drop-shadow(0px 0px 16px rgba(2, 13, 41, 0.12));
+  --color-icon-attach: rgba(217, 218, 221, 1);
 }
 
 .logo-name {

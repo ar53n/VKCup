@@ -47,6 +47,11 @@
 .letterFlag {
   min-width: 20px;
   margin-left: 12px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .author {

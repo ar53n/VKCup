@@ -41,17 +41,20 @@ export default function LetterItem(props) {
   });
 
   return (
-    <A class={styles.linkReset} href={window.btoa(`${props.date};${props.author.email}`)}>
+    <A
+      class={styles.linkReset}
+      href={window.btoa(`${props.date};${props.author.email}`)}
+    >
       <div
         class={styles.letterItemRoot}
         classList={{ [styles.unread]: !read() }}
       >
         <div class={styles.author}>
           <div
-            onClick={(e) => {
-              console.log(e);
-              e.stopPropagation();
+            oncapture:click={(e) => {
               setRead((v) => !v);
+              e.stopPropagation();
+              e.preventDefault()
             }}
             class={styles.readIcon}
           ></div>
@@ -61,9 +64,10 @@ export default function LetterItem(props) {
           >{`${props.author.name} ${props.author.surname}`}</span>
         </div>
         <div
-          onClick={(e) => {
-            e.stopPropagation();
+          oncapture:click={(e) => {
             setBookmark((v) => !v);
+            e.stopPropagation();
+            e.preventDefault()
           }}
           class={styles.letterStatus}
         >
@@ -102,7 +106,13 @@ export default function LetterItem(props) {
         </span>
         <span class={styles.letterFlag}>
           <Flag short={true} flag={props.flag} />
-          {props.doc && <Flag short={true} flag="Вложения" />}
+          {props.doc && (
+            <Flag
+              style={{ "margin-left": "4px" }}
+              short={true}
+              flag="Вложения"
+            />
+          )}
         </span>
         <span class={styles.letterDate}>{relativeDate()}</span>
       </div>

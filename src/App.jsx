@@ -1,4 +1,4 @@
-import { Outlet, Routes, Route, useNavigate } from "@solidjs/router";
+import { Outlet, Routes, Route, useNavigate, Navigate } from "@solidjs/router";
 import styles from "./App.module.css";
 import Logo from "./logo.svg";
 import Button from "./components/Button/Button";
@@ -18,12 +18,18 @@ import { createContext, createEffect, createSignal } from "solid-js";
 export const ThemeContext = createContext([{ theme: "" }, {}]);
 
 function App() {
+  let isMount = false;
   const navigate = useNavigate();
-  const darkTheme = document.querySelector("html").classList.contains("dark");
-  const [theme, setTheme] = createSignal({ theme: darkTheme ? "dark" : "" });
+  const isDarkTheme = document.querySelector("html").classList.contains("dark");
+  const [theme, setTheme] = createSignal({ theme: isDarkTheme ? "dark" : "" });
 
   createEffect(() => {
-    console.log(theme().theme);
+    console.log('createEfect theme', theme());
+    // if (prev === undefined) return;
+    if (!isMount) {
+      isMount = true;
+      return
+    } 
     document.querySelector("html").classList.toggle("dark");
     const darkTheme = document.querySelector("html").classList.contains("dark");
     if (darkTheme) {
@@ -31,6 +37,7 @@ function App() {
     } else {
       localStorage.removeItem("theme");
     }
+    return darkTheme
   });
 
   const signal = [theme, setTheme];
@@ -92,7 +99,7 @@ function App() {
                 }}
               >
                 <ThemeIcon />
-                {theme().theme === "dark" ? "Темная тема" : "Светлая тема"}
+                {theme().theme === "dark" ? "Тема: темная" : "Тема: светлая"}
               </Button>
             </div>
           </aside>
