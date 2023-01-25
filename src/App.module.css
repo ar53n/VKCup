@@ -19,12 +19,6 @@
   margin-bottom: 12px;
 }
 
-.letterListRoot {
-  display: flex;
-  border-radius: 12px;
-  background-color: var(--color-bg-list);
-  width: 100%;
-}
 .readIcon {
   width: 28px;
   display: inline-block;
@@ -39,15 +33,6 @@
   min-width: 276px;
   display: inline-flex;
   align-items: center;
-}
-
-.letterListContainer {
-  flex: 1;
-  border-radius: 12px;
-  background-color: var(--color-bg-list);
-  font-size: 15px;
-  line-height: 20px;
-  width: 100%;
 }
 
 .header {
@@ -80,4 +65,9 @@ hr {
   margin-left: 16px;
   margin-right: 16px;
   min-width: 200px;
+}
+
+.activeButton {
+  background-color: var(--color-button-active) !important;
+  font-weight: 700;
 }

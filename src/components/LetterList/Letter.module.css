@@ -77,7 +77,28 @@
   border-radius: 12px;
 }
 
-input[type="checkbox"] {
+.checkboxWrapper {
+  display: inline-flex;
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.avatar {
+}
+
+.checkboxWrapper {
+  display: none;
+}
+
+.letterItemRoot:hover .checkboxWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letterItemRoot:hover .avatar {
   display: none;
 }
 
@@ -121,4 +142,24 @@ input[type="checkbox"] {
 .unread .authorName,
 .unread .letterTitle {
   font-weight: 700;
+}
+
+.letterListContainer {
+  flex: 1;
+  border-radius: 12px;
+  background-color: var(--color-bg-list);
+  font-size: 15px;
+  line-height: 20px;
+  width: 100%;
+  overflow: auto;
+}
+
+.letterListRoot {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: var(--color-bg-list);
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow: hidden;
 }

@@ -27,6 +27,7 @@ const currentDate = new Date().toDateString();
 
 export default function LetterItem(props) {
   const [read, setRead] = createSignal(props.read);
+  const [active, setActive] = createSignal(false);
   const [bookmark, setBookmark] = createSignal(props.bookmark);
 
   const relativeDate = createMemo(() => {
@@ -44,6 +45,7 @@ export default function LetterItem(props) {
     <A
       class={styles.linkReset}
       href={window.btoa(`${props.date};${props.author.email}`)}
+      oncapture:click={e =>  e.preventDefault()}
     >
       <div
         class={styles.letterItemRoot}
@@ -54,11 +56,28 @@ export default function LetterItem(props) {
             oncapture:click={(e) => {
               setRead((v) => !v);
               e.stopPropagation();
-              e.preventDefault()
+              e.preventDefault();
             }}
             class={styles.readIcon}
           ></div>
-          <Avatar {...props}></Avatar>
+          <div style={{ display: "flex", "margin-right": "12px" }}>
+            <Avatar
+              author={props.author}
+              classList={{ [styles.avatar]: true }}
+            ></Avatar>
+
+            <label oncapture:click={e => e.stopPropagation()}  class={styles.checkboxWrapper}>
+              <input
+                oncapture:change={(e) => {
+                  setActive((v) => !v);
+                  e.stopPropagation();
+                  // e.preventDefault();
+                }}
+                checked={active()}
+                type="checkbox"
+              />
+            </label>
+          </div>
           <span
             class={styles.authorName}
           >{`${props.author.name} ${props.author.surname}`}</span>
@@ -67,7 +86,7 @@ export default function LetterItem(props) {
           oncapture:click={(e) => {
             setBookmark((v) => !v);
             e.stopPropagation();
-            e.preventDefault()
+            e.preventDefault();
           }}
           class={styles.letterStatus}
         >

@@ -1,37 +1,20 @@
-import { createMemo } from "solid-js";
+import { createMemo, splitProps } from "solid-js";
 import styles from "./Avatar.module.css";
 
 export default function Avatar(props) {
+  if (!props.author) return null;
   const letters = createMemo(() => {
     return `${props.author.name[0].toUpperCase()}${props.author.surname[0].toUpperCase()}`;
   });
+  const [locals, others] = splitProps(props, ["author"]);
   return (
-    <div class={styles.letterAvatar}>
+    <div {...others} class={styles.letterAvatar}>
       <Show
         when={props.author.avatar}
-        fallback={
-          <span
-            style={{
-              "background-color": "mediumpurple",
-              "user-select": "none",
-              display: "flex",
-              color: "white",
-              "font-size": "13px",
-              "font-weight": 700,
-              "border-radius": "50%",
-              width: "32px",
-              height: "32px",
-              "justify-content": "center",
-              "align-items": "center",
-            }}
-          >
-            {letters()}
-          </span>
-        }
+        fallback={<span class={styles.letterAvatarFallback}>{letters()}</span>}
       >
         <img src={props.author.avatar} />
       </Show>
-      <input type="checkbox" />
     </div>
   );
 }

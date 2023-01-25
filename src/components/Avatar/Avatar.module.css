@@ -1,11 +1,22 @@
-
 .letterAvatar {
   display: inline-flex;
   min-width: 32px;
   width: 32px;
   height: 32px;
-  margin-right: 12px;
   overflow: hidden;
   border-radius: 50%;
 }
 
+.letterAvatarFallback {
+  background-color: mediumpurple;
+  user-select: none;
+  display: flex;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  justify-content: center;
+  align-items: center;
+}
